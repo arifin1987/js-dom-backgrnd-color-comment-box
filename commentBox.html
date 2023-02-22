@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment-Box</title>
+</head>
+<body>
+    <div id="newDiv">
+
+    </div>
+    <div>
+        <textarea name="" id="input-field" cols="30" rows="10"></textarea>
+        <button id="text-btn">Add Text</button>
+    </div>
+
+    <script>
+        document.getElementById('text-btn').addEventListener('click',function(){
+            let textField = document.getElementById('input-field')
+            let text = textField.value;
+            let newDiv = document.getElementById('newDiv');
+            let p = document.createElement('p');
+            p.innerText= text;
+            newDiv.appendChild(p);
+            
+        })
+    </script>
+</body>
+</html>
